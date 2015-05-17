@@ -1,0 +1,75 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span10">
+      <!--Body content-->
+      <h1>KING OF PONG</h1>
+      <button ng-click="start()">Start</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button ng-click="reset()">Reset</button><br/>
+      <table>
+      <tr>
+      <th>
+      Left Side: <br/>
+      {{topLeftPlayerName}} + {{bottomLeftPlayerName}}
+      </th>
+      <th>
+       Right Side: <br/>
+       {{topRightPlayerName}} + {{bottomRightPlayerName}}
+      </th>
+      <th></th>
+      </tr>
+      <tr>
+      <td>
+        <input ng-model="topLeftPlayerName" id="topLeftPlayerName" ng-disabled="isDisabled"/>
+      </td>
+      <td>
+          <input ng-model="topRightPlayerName" id="topRightPlayerName" ng-disabled="isDisabled"/>
+      </td>
+      <td> Left Team Score: <br/>
+      {{leftTeamScore}}
+      </td>
+      </tr>
+            <tr>
+      <td>
+             <button ng-click="changeScore(true, 1)" ng-disabled="!isDisabled">Good :)</button>
+	      {{topLeftPG}} / {{topLeftPC}}
+       <button ng-click="changeScore(false, 1)" ng-disabled="!isDisabled">Bad :(</button>
+      </td>
+        <td>
+	     <button ng-click="changeScore(true, 3)" ng-disabled="!isDisabled">Good :)</button>
+	     	{{topRightPG}} / {{topRightPC}}
+       <button ng-click="changeScore(false, 3)" ng-disabled="!isDisabled">Bad :(</button>
+      </td>
+      <td>
+      </td>
+      </tr>
+      <tr>
+      <td>
+	<input ng-model="bottomLeftPlayerName" id="bottomLeftPlayerName" ng-disabled="isDisabled"/>
+        </td>
+      <td>
+	<input ng-model="bottomRightPlayerName" id="bottomRightPlayerName" ng-disabled="isDisabled"/>
+
+        <br/>
+      </td>
+      <td>       Right Team <br/>
+       {{rightTeamScore}}
+       </td>
+      </tr>
+      <tr>
+      <td>
+                   <button ng-click="changeScore(true, 2)" ng-disabled="!isDisabled">Good :)</button>
+		   {{bottomLeftPG}} / {{bottomLeftPC}}
+       <button ng-click="changeScore(false, 2)" ng-disabled="!isDisabled">Bad :(</button>
+      </td>
+        <td>
+	       <button ng-click="changeScore(true, 4)" ng-disabled="!isDisabled">Good :)</button>
+	              {{bottomRightPG}} / {{bottomRightPC}}
+       <button ng-click="changeScore(false, 4)" ng-disabled="!isDisabled">Bad :(</button>
+      </td>
+      <td>
+      </td>
+      </tr>
+      </table>
+    </div>
+  </div>
+</div>
